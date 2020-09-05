@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@100&display=swap');
 
 :root{
   --primary: #efb6b2;
@@ -24,6 +25,9 @@ body{
 }
 .header h2, .header p{
   text-align: center;
+}
+.header p{
+  font-family: 'Grandstander', cursive;
 }
 .header h2{
   margin-top: 30px;
@@ -123,6 +127,7 @@ label span strong{
   margin: 60px;
   box-shadow: 3px 5px 7px rgba(0,0,0,0.5);
   border: 3px solid white;
+  background: #dedede;
 }
 .backdrop .close-btn{
   position: fixed;

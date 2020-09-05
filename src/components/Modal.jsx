@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import SelectedImageContext from '../contexts/SelectedImage';
+import { motion } from "framer-motion";
 
 const Modal = () => {
     const {selectedImage,selectImage} = useContext(SelectedImageContext);
@@ -8,10 +9,17 @@ const Modal = () => {
             selectImage(null);
     }
     return (
-        <div className="backdrop" onClick={handleClick}>
+        <motion.div className="backdrop" onClick={handleClick}
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+        >
             <div className="close-btn" onClick={handleClick}>&#9747;</div>
-            <img src={selectedImage} alt="enlarged-pic" />
-        </div>
+            <motion.img src={selectedImage} alt="enlarged-pic" 
+                initial={{y: "-100vh"}}
+                animate={{y: 0}}
+                transition={{ duration: 0.5 }}
+            />
+        </motion.div>
     );
 };
 
